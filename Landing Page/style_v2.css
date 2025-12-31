@@ -1159,12 +1159,10 @@ body.pricing-v2 {
 }
 
 .hero-video {
+    border-radius: 0 !important;
     width: 100% !important;
-    aspect-ratio: 16 / 9;
     height: auto !important;
-    border-radius: 18px !important;
 }
-
 /* ===========================================
    MAKE HERO VIDEO MUCH LARGER
    =========================================== */
@@ -1301,13 +1299,10 @@ body.pricing-v2 {
     align-items: center;
     background: rgba(0,0,0,0.45);
     backdrop-filter: blur(4px);
+    cursor: pointer;
     z-index: 50;
     transition: opacity 0.35s ease;
-
-    /* 🔥 THIS LINE FIXES CLICKING */
-    pointer-events: none;
 }
-
 
 .video-overlay.hidden {
     opacity: 0;
