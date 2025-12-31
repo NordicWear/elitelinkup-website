@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Elite LinkUp – Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Main styles (your site theme) -->
+    <link rel="stylesheet" href="../style_v2.css">
+    <link rel="stylesheet" href="course_style.css">
+
+    <style>
+        /* Additional login styling */
+        body {
+            background: #000;
+            font-family: 'Inter', system-ui, sans-serif;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 0 20px;
+        }
+
+        .login-wrapper {
+            background: #0f0f0f;
+            border: 1px solid rgba(212,175,55,0.35);
+            box-shadow: 0 8px 30px rgba(212,175,55,0.25);
+            border-radius: 18px;
+            padding: 40px 34px;
+            max-width: 420px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .login-logo {
+            width: 180px;
+            margin-bottom: 10px;
+        }
+
+        .login-title {
+            font-size: 26px;
+            font-weight: 700;
+            background: linear-gradient(90deg, #d4af37, #f3e29f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 28px;
+        }
+
+        .login-input {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 18px;
+            border-radius: 8px;
+            border: 1px solid rgba(212,175,55,0.35);
+            background: #111;
+            color: #fff;
+            font-size: 15px;
+            box-shadow: inset 0 0 8px rgba(212,175,55,0.15);
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 14px;
+            border-radius: 8px;
+            border: 1px solid rgba(212,175,55,0.7);
+            background: transparent;
+            color: rgba(212,175,55,0.9);
+            font-size: 16px;
+            cursor: pointer;
+            transition: background .25s ease, border-color .25s ease;
+        }
+
+        .login-btn:hover {
+            background: rgba(212,175,55,0.15);
+            border-color: rgba(212,175,55,1);
+        }
+
+        .forgot-link {
+            display: block;
+            margin-top: 14px;
+            font-size: 14px;
+            color: rgba(212,175,55,0.75);
+            text-decoration: none;
+        }
+
+        .forgot-link:hover {
+            color: rgba(212,175,55,1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-wrapper">
+        
+        <!-- LOGO -->
+        <img src="courses/courses_profiles/logo/EliteLinkup_2.0.png" 
+             class="login-logo" 
+             alt="Elite LinkUp Logo">
+
+        <!-- TITLE -->
+        <h2 class="login-title">Member Login</h2>
+
+        <!-- FORM -->
+        <form id="loginForm">
+            <input type="email" id="email" class="login-input" placeholder="Email" required>
+            <input type="password" id="password" class="login-input" placeholder="Password" required>
+
+            <button type="submit" class="login-btn">Login</button>
+
+            <a href="forgot-password.html" class="forgot-link">Forgot Password?</a>
+        </form>
+    </div>
+
+    <script>
+        // ⬇️ Connect this to your backend later
+        document.getElementById("loginForm").addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            const res = await fetch("https://YOUR_BACKEND_URL/auth/login", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                credentials: "include",
+                body: JSON.stringify({ email, password })
+            });
+
+            if (res.ok) {
+                window.location.href = "Elite Linkup 2.0 Full Package.html";
+            } else {
+                alert("Invalid login.");
+            }
+        });
+    </script>
+</body>
+</html>

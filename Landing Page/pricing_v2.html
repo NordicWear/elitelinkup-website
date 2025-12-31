@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elite LinkUp — Choose Your Path</title>
+
+    <!-- V1 Styling (works perfectly for pricing page) -->
+    <link rel="stylesheet" href="style_v2.css">
+
+
+
+    <!-- FIX GRID + SPACING + OVERFLOW -->
+    <style>
+        /* Force 3-card layout */
+        #choose-path .choose-grid {
+            display: grid !important;
+            grid-template-columns: repeat(3, 1fr) !important;
+            gap: 24px !important;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding-top: 20px;
+        }
+
+        /* Fix giant logo shrinking */
+        .logo {
+            max-height: 120px !important;
+        }
+
+        /* Fix spacing above title */
+        #choose-path {
+            padding-top: 10px !important;
+        }
+
+        /* Make cards match your screenshot perfectly */
+        .choose-card {
+            background: rgba(24, 24, 24, 0.55) !important;
+            border: 1px solid rgba(212,175,55,0.25) !important;
+            box-shadow: 0 0 25px rgba(212,175,55,0.15) !important;
+            border-radius: 16px !important;
+            padding: 24px !important;
+        }
+
+        /* Fix gold glow on most popular */
+        .popular-card {
+            border: 1px solid rgba(212,175,55,0.65) !important;
+            box-shadow: 0 0 35px rgba(212,175,55,0.35) !important;
+        }
+
+        /* Fix footer spacing */
+        h2.final-line {
+            margin-top: 40px;
+            text-align: center;
+            color: #d4af37;
+            font-size: 22px;
+            opacity: 0.9;
+        }
+
+        /* Fix countdown position */
+        .countdown-box {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body class="pricing-v2">
+
+
+    <!-- TOP LOGO -->
+    <header class="logo-header">
+        <img src="assets_v2/EliteLinkup.png" alt="Elite LinkUp Logo" class="logo">
+    </header>
+    <!-- PRICING TITLE -->
+    <section id="choose-path">
+        <h1 class="section-title">
+            Choose Your Path<br>
+            <span class="elite-subtitle">Elite LinkUp 2.0</span>
+        </h1>
+
+        <div class="choose-grid">
+        <!-- STARTER PACK -->
+        <div class="choose-card fade-in">
+            <div class="lifetime-badge">LIFETIME ACCESS</div>
+
+            <div class="card-header-block">
+                <img src="assets_v2/mentors/Starter Pack.png" class="pricing-image">
+                <div class="lux-price">
+                    <span class="lux-price-new">$799.50</span>
+                    <span class="lux-price-old">$1,599</span>
+                    <span class="lux-price-badge">50% OFF</span>
+                </div>
+                <h2>Beginner Package</h2>
+                <p class="package-subtitle">Includes 8 Expert Training Programs</p>
+            </div>
+
+            <h3>Included:</h3>
+            <ul>
+                <li>50 Secrets of Success - Rikhard
+                    <img class="flag" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f1ee-1f1f8.png">
+                </li>
+                <li>Affiliate Marketing - Aleks
+                    <img class="flag" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f1e8-1f1e6.png">
+                </li>
+                <li>E-Commerce & Dropshipping - Victor
+                    <img class="flag" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f1ec-1f1e7.png">
+                </li>
+                <li>Content Automation - Ryan
+                    <img class="flag" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f1f3-1f1f1.png">
+                </li>
+                <li>Amazon FBA - Adrian
+                    <img class="flag" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f1e9-1f1ea.png">
+                </li>
+                <li>Copywriting - Dominic
+                    <img class="flag" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f1fa-1f1f8.png">
+                </li>
+                <li>Marketing Agency (SMMA) - Lukas
+                    <img class="flag" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f1f8-1f1ea.png">
+                </li>
+                <li>Trading & Investing - Henrik
+                    <img class="flag" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f1f3-1f1f4.png">
+                </li>
+                <li>Elite LinkUp Live Room
+                <span class="exclusive-badge">LIVE</span>
+                </li>
+            </ul>
+
+            <h3>Does NOT include:</h3>
+            <ul>
+                <li>Networking Playbook - Rikhard
+                    <img class="flag" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f1ee-1f1f8.png">
+                </li>
+                <li>High Ticket Sales - Marcus
+                    <img class="flag" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f1fa-1f1f8.png">
+                </li>
+                <li>Peak Focus Blueprint - Thomas
+                    <img class="flag" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f1ec-1f1e7.png">
+                </li>
+            </ul>
+
+            <a href="https://buy.stripe.com/00w6oI6yA6085FM0Lh1kA05" class="btn-gold">JOIN NOW!</a>
+        </div>
+            <!-- FULL ACCESS PACK -->
+            <div class="choose-card fade-in">
+                <div class="particle-container"></div>
+                <div class="lifetime-badge">LIFETIME ACCESS</div>
+
+                <div class="card-header-block">
+                    <img src="assets_v2/mentors/Full Access Pack.png" class="pricing-image">
+                    <div class="lux-price">
+                        <span class="lux-price-new">$999.50</span>
+                        <span class="lux-price-old">$1,999</span>
+                        <span class="lux-price-badge">50% OFF</span>
+                    </div>
+                    <h2>Full Package</h2>
+                    <p class="package-subtitle">Includes 11 Expert Training Programs</p>
+                </div>
+
+                <h3>Includes:</h3>
+                <ul>
+                    <li>50 Secrets of Success - Rikhard 
+                        <img class="flag" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f1ee-1f1f8.png">
+                    </li>
+                    <li>Affiliate Marketing - Aleks
+                        <img class="flag" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f1e8-1f1e6.png">
+                    </li>
+                    <li>E-Commerce & Dropshipping - Victor
+                        <img class="flag" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f1ec-1f1e7.png">
+                    </li>
+                    <li>Content Automation - Ryan
+                        <img class="flag" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f1f3-1f1f1.png">
+                    </li>
+                    <li>Amazon FBA - Adrian
+                        <img class="flag" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f1e9-1f1ea.png">
+                    </li>
+                    <li>Copywriting - Dominic
+                        <img class="flag" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f1fa-1f1f8.png">
+                    </li>
+                    <li>Marketing Agency (SMMA) - Lukas
+                        <img class="flag" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f1f8-1f1ea.png">
+                    </li>
+                    <li>Trading & Investing - Henrik
+                        <img class="flag" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f1f3-1f1f4.png">
+                    </li>
+                    <li>Elite LinkUp Live Room
+                    <span class="exclusive-badge">LIVE</span>
+                    </li>
+                </ul>
+
+                <h3>Premium Add-Ons Included:</h3>
+                <ul>
+                    <li>Networking Playbook - Rikhard 
+                        <img class="flag" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f1ee-1f1f8.png">
+                    </li>
+                    <li>High Ticket Sales - Marcus
+                        <img class="flag" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f1fa-1f1f8.png">
+                    </li>
+                    <li>Peak Focus Blueprint - Thomas
+                        <img class="flag" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f1ec-1f1e7.png">
+                    </li>
+                </ul>
+
+                <a href="https://buy.stripe.com/28E28s6yAagod8ealR1kA04" class="btn-gold">JOIN NOW! ⭐MOST POPULAR⭐ </a>
+            </div>
+
+            <!-- MENTORSHIP -->
+            <div class="choose-card fade-in">
+                <div class="particle-container"></div>
+                <div class="lifetime-badge">LIFETIME ACCESS</div>
+
+            <div class="card-header-block">
+                <img src="assets_v2/mentors/Full Mentorship.png" class="pricing-image">
+
+                <div class="lux-price">
+                    <span class="lux-price-new">$4,999</span>
+                </div>
+
+                <div class="lux-seats">
+                    <span id="seats-left">Only a Few Spots Left</span>
+                </div>
+
+                <h2>Rikhard's Full Mentorship</h2>
+                <p class="subtitle">Full Package + Mentorship With Rikhard</p>
+            </div>
+
+            <h3>Includes:</h3>
+            <ul>
+                <li>Personalized guidance and a custom roadmap designed to scale your growth.</li>
+                <li>Priority access to Rikhard with weekly 1-on-1 calls, fast support, and ongoing communication.</li>
+                <li>Full access to Rikhard’s private resources, strategies, frameworks, and inner-circle insights.</li>
+                <li>Deep analysis and strategic optimization across your offers, pricing, systems, and content.</li>
+                <li>Lessons from Rikhard’s biggest mistakes over 5 years to help you avoid costly setbacks.</li>
+                <li>Exclusive access to private meetups, mastermind calls, and high-level networking.</li>
+            </ul>
+
+            <a href="mentorship.html"
+                class="btn-gold" 
+                target="_blank">
+                APPLY FOR MENTORSHIP!
+            </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- COUNTDOWN -->
+    <div class="countdown-box">
+        50% OFF - Offer Ends In:
+        <div id="countdown" class="countdown-timer">Loading...</div>
+    </div>
+
+    <div class="avatar-text-wrapper pricing-avatar-wrapper">
+        <div class="avatar-group">
+            <img src="assets_v2/students/dubai.png"  class="avatar">
+            <img src="assets_v2/students/desert.png" class="avatar">
+            <img src="assets_v2/students/jet.png"    class="avatar">
+            <img src="assets_v2/students/isak.png"   class="avatar">
+        </div>
+
+        <div class="avatar-text">
+            Join 5,000+ members already transforming their lives
+        </div>
+    </div>
+
+    <!-- Countdown Script -->
+    <script>
+        function startCountdown() {
+            const cycleDays = 14;
+            const now = new Date();
+            const cycleStart = new Date("2024-01-01"); 
+            const ms = 86400000;
+
+            const elapsed = Math.floor((now - cycleStart) / ms);
+            const daysIntoCycle = elapsed % cycleDays;
+            const next = new Date(now.getTime() + ((cycleDays - daysIntoCycle) * ms));
+
+            function update() {
+                const diff = next - new Date();
+                if (diff <= 0) return startCountdown();
+
+                const d = Math.floor(diff / (1000*60*60*24));
+                const h = Math.floor((diff / (1000*60*60)) % 24);
+                const m = Math.floor((diff / (1000*60)) % 60);
+                const s = Math.floor((diff / 1000) % 60);
+
+                document.getElementById("countdown").textContent =
+                    `${d}d : ${h}h : ${m}m : ${s}s`;
+            }
+
+            setInterval(update, 1000);
+            update();
+        }
+
+        startCountdown();
+    </script>
+
+</body>
+</html>

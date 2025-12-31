@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apply for Private Mentorship</title>
+
+    <!-- Reuse existing Elite LinkUp styles -->
+    <link rel="stylesheet" href="style_v2.css">
+
+    <style>
+        /* Page-specific layout tweaks */
+        .mentorship-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .mentorship-wrapper p {
+            opacity: 0.85;
+            margin-bottom: 20px;
+        }
+
+        .application-card {
+            background: rgba(24, 24, 24, 0.65);
+            border: 1px solid rgba(212,175,55,0.35);
+            border-radius: 18px;
+            padding: 40px;
+            box-shadow: 0 0 35px rgba(212,175,55,0.2);
+            margin-top: 40px;
+            text-align: left;
+        }
+
+        .application-card h3 {
+            text-align: center;
+            color: var(--gold);
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 22px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: var(--gold);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 14px 16px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.15);
+            background: #000;
+            color: #fff;
+            font-size: 15px;
+        }
+
+        .form-group textarea {
+            min-height: 110px;
+            resize: vertical;
+        }
+
+        .form-actions {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .divider {
+            margin: 60px 0 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .waitlist-card {
+            background: rgba(15,15,15,0.65);
+            border: 1px solid rgba(212,175,55,0.25);
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 0 25px rgba(212,175,55,0.15);
+        }
+    </style>
+</head>
+
+<body class="pricing-v2">
+
+    <!-- TOP LOGO -->
+    <header class="logo-header">
+        <img src="assets_v2/EliteLinkup.png" alt="Elite LinkUp Logo" class="logo">
+    </header>
+
+    <main class="mentorship-wrapper">
+
+        <h1 class="section-title">Apply for Private Mentorship</h1>
+
+        <p>
+            This is a selective, high-touch mentorship with Rikhard.<br>
+            Applications are reviewed manually. Most applicants are not accepted.
+        </p>
+
+        <p>
+            This mentorship is built on Rikhard’s private systems and inner-circle network assets that took 5–6 years to build from nothing.
+            Rikhard personally reviews every application and only works with people he believes are worth investing his time and attention into.
+        </p>
+
+        <!-- APPLICATION FORM -->
+        <div class="application-card">
+            <h3>Mentorship Application</h3>
+
+            <form>
+
+                <div class="form-group">
+                    <label>What’s your name?</label>
+                    <input type="text" required>
+                </div>
+
+                <div class="form-group">
+                    <label>What are your current monthly results?</label>
+                    <input type="text" placeholder="Revenue, profit, or traction" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Where do you feel most stuck right now and why?</label>
+                    <textarea required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Why do you believe you’re a good fit for private mentorship?</label>
+                    <textarea required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Instagram / X / Telegram (optional)</label>
+                    <input type="text">
+                </div>
+
+                <div class="form-group">
+                    <label>Email address</label>
+                    <input type="email" required placeholder="You’ll be notified here if you’re accepted">
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-gold">
+                        Join Waitlist
+                    </button>
+
+                    <p style="margin-top: 14px; font-size: 14px; opacity: 0.65;">
+                        Applications are reviewed personally by Rikhard, and if approved you’ll be contacted by email to take the next steps toward working closely with him.
+                    </p>
+                </div>
+
+            </form>
+        </div>
+
+    </main>
+
+</body>
+</html>

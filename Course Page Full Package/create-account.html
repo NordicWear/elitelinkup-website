@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Account – Elite LinkUp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Main styles -->
+    <link rel="stylesheet" href="../style_v2.css">
+    <link rel="stylesheet" href="course_style.css">
+
+    <style>
+        /* Same base look as login.html */
+        body {
+            background: #000;
+            font-family: 'Inter', system-ui, sans-serif;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 0 20px;
+        }
+
+        .login-wrapper {
+            background: #0f0f0f;
+            border: 1px solid rgba(212,175,55,0.35);
+            box-shadow: 0 8px 30px rgba(212,175,55,0.25);
+            border-radius: 18px;
+            padding: 40px 34px;
+            max-width: 420px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .login-logo {
+            width: 180px;
+            margin-bottom: 10px;
+        }
+
+        .login-title {
+            font-size: 26px;
+            font-weight: 700;
+            background: linear-gradient(90deg, #d4af37, #f3e29f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+        }
+
+        .login-sub {
+            font-size: 14px;
+            opacity: 0.75;
+            margin-bottom: 24px;
+        }
+
+        /* Inputs + button share sizing; also reinforced in course_style.css */
+        .login-input,
+        .login-btn {
+            width: 100%;
+            height: 54px;
+            padding: 0 14px;
+            box-sizing: border-box;
+            font-size: 15px;
+        }
+
+        .login-input {
+            margin-bottom: 18px;
+            border-radius: 8px;
+            border: 1px solid rgba(212,175,55,0.35);
+            background: #111;
+            color: #fff;
+            box-shadow: inset 0 0 8px rgba(212,175,55,0.15);
+        }
+
+        .login-btn {
+            border-radius: 8px;
+            border: 1px solid rgba(212,175,55,0.7);
+            background: transparent;
+            color: rgba(212,175,55,0.9);
+            cursor: pointer;
+            transition: background .25s ease, border-color .25s ease;
+        }
+
+        .login-btn:hover {
+            background: rgba(212,175,55,0.15);
+            border-color: rgba(212,175,55,1);
+        }
+
+        .small-link {
+            display: block;
+            margin-top: 16px;
+            font-size: 14px;
+            color: rgba(212,175,55,0.75);
+            text-decoration: none;
+        }
+
+        .small-link:hover {
+            color: rgba(212,175,55,1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-wrapper">
+        <!-- LOGO (remove this <img> block if you’d prefer no logo like forgot-password) -->
+        <img src="courses/courses_profiles/logo/EliteLinkup_2.0.png"
+             class="login-logo"
+             alt="Elite LinkUp Logo">
+
+        <!-- TITLE -->
+        <h2 class="login-title">Create Your Account</h2>
+        <p class="login-sub">Set your password to activate your Elite LinkUp access.</p>
+
+        <!-- FORM -->
+        <form id="createAccountForm">
+            <input type="email"
+                   id="email"
+                   class="login-input"
+                   placeholder="Email"
+                   required>
+
+            <input type="password"
+                   id="password"
+                   class="login-input"
+                   placeholder="Create password"
+                   required>
+
+            <input type="password"
+                   id="confirmPassword"
+                   class="login-input"
+                   placeholder="Confirm password"
+                   required>
+
+            <button type="submit" class="login-btn">Create Account</button>
+
+            <a href="login.html" class="small-link">Already have an account? Log in</a>
+        </form>
+    </div>
+
+    <script>
+        // Get ?token=XYZ from the URL (from the email link)
+        const params = new URLSearchParams(window.location.search);
+        const token = params.get("token");
+
+        document.getElementById("createAccountForm").addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirmPassword").value;
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return;
+            }
+
+            if (!token) {
+                // You can also block completely here if you want
+                console.warn("No token found in URL. Make sure the email link includes ?token=...");
+            }
+
+            try {
+                const res = await fetch("https://YOUR_BACKEND_URL/auth/create-account", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        email,
+                        password,
+                        token // token from email link
+                    })
+                });
+
+                if (res.ok) {
+                    alert("Account created! You can now log in.");
+                    window.location.href = "login.html";
+                } else {
+                    let msg = "There was a problem creating your account.";
+                    try {
+                        const data = await res.json();
+                        if (data && data.message) msg = data.message;
+                    } catch (_) {}
+                    alert(msg);
+                }
+            } catch (err) {
+                console.error(err);
+                alert("Network error. Please try again.");
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+const bots = [
+  {
+    name: "Marcus",
+    phrases: [
+      "Wait so what’s the actual point?",
+      "You didn’t really answer that",
+      "That sounds nice but does it work?"
+    ]
+  },
+  {
+    name: "Elena",
+    phrases: [
+      "I’m confused, are you saying effort doesn’t matter?",
+      "So what should someone actually do then?",
+      "This feels contradictory"
+    ]
+  },
+  {
+    name: "Kai",
+    phrases: [
+      "Cap",
+      "That’s cope",
+      "Easy to say from your position"
+    ]
+  }
+];

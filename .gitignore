@@ -1,0 +1,10 @@
+# Ignore ALL video files (placeholders + real)
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+
+# Ignore OS junk
+.DS_Store
+Thumbs.db
