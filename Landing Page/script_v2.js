@@ -116,6 +116,7 @@ function addGlowPulse(element) {
 document.addEventListener("DOMContentLoaded", () => {
     const video = document.getElementById("heroVideo");
     const overlay = document.getElementById("videoOverlay");
+    const fullscreenBtn = document.getElementById("fullscreenBtn");
 
     if (!video || !overlay) return;
 
