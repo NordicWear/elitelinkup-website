@@ -52,10 +52,15 @@
                     <div class="hero-video-card">
 
                         <!-- VIDEO -->
-                        <video id="heroVideo" class="hero-video" muted playsinline preload="metadata" autoplay loop>
-                            <source src="assets_v2/videos/trailer.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
+                        <div class="hero-video hero-video-iframe">
+                          <iframe
+                            src="https://customer-zsr29ljfl52p7dck.cloudflarestream.com/3bc40880ca1cf45a801815fb377a3944/iframe?autoplay=true&muted=true&loop=true&controls=false"
+                            loading="lazy"
+                            allow="autoplay; encrypted-media; picture-in-picture;"
+                            allowfullscreen
+                            style="border:none;width:100%;height:100%;">
+                          </iframe>
+                        </div>
 
                         <!-- OVERLAY PLAY BUTTON -->
                         <div id="videoOverlay" class="video-overlay">
