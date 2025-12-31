@@ -111,48 +111,18 @@ function addGlowPulse(element) {
 // END OF SCRIPT
 // ---------------------------------------------------------
 // ---------------------------------------------------------
-// 7. Golden Overlay Click-to-Play + Click-to-Pause System
+// 7. Hero Video Overlay (Cloudflare Stream Compatible)
 // ---------------------------------------------------------
 document.addEventListener("DOMContentLoaded", () => {
-    const video = document.getElementById("heroVideo");
     const overlay = document.getElementById("videoOverlay");
-    const fullscreenBtn = document.getElementById("fullscreenBtn");
 
-    if (!video || !overlay) return;
+    if (!overlay) return;
 
-    // Autoplay background muted preview
-    video.muted = true;
-    video.play().catch(() => {});
-
-    let firstPlay = true;  // tracks if overlay play is the first click
-
-    // CLICK OVERLAY → Play video
     overlay.addEventListener("click", () => {
         overlay.classList.add("hidden");
-
-        // ONLY restart on the first play
-        if (firstPlay) {
-            video.currentTime = 0;
-            video.muted = false;
-            firstPlay = false;  // after first time, never restart again
-        }
-
-        video.play();
-    });
-
-    // CLICK VIDEO → Pause + return overlay
-    video.addEventListener("click", () => {
-        if (!video.paused) {
-            video.pause();
-            overlay.classList.remove("hidden");
-        }
-    });
-
-    // When video ends → show overlay again
-    video.addEventListener("ended", () => {
-        overlay.classList.remove("hidden");
     });
 });
+
 /* =========================================================
    SUBTLE MAGNETIC CURSOR PULL FOR FAQ ITEMS
    ========================================================= */
