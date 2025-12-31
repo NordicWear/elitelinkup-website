@@ -1159,10 +1159,12 @@ body.pricing-v2 {
 }
 
 .hero-video {
-    border-radius: 0 !important;
     width: 100% !important;
+    aspect-ratio: 16 / 9;
     height: auto !important;
+    border-radius: 18px !important;
 }
+
 /* ===========================================
    MAKE HERO VIDEO MUCH LARGER
    =========================================== */
