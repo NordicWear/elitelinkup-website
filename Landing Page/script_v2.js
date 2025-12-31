@@ -111,17 +111,24 @@ function addGlowPulse(element) {
 // END OF SCRIPT
 // ---------------------------------------------------------
 // ---------------------------------------------------------
-// 7. Hero Video Overlay (Cloudflare Stream Compatible)
+// 7. Hero VSL Logic (Cloudflare Stream – Cinematic Mode)
 // ---------------------------------------------------------
 document.addEventListener("DOMContentLoaded", () => {
     const overlay = document.getElementById("videoOverlay");
+    const iframe = document.getElementById("heroStream");
 
-    if (!overlay) return;
+    if (!overlay || !iframe) return;
 
     overlay.addEventListener("click", () => {
+        // Remove overlay
         overlay.classList.add("hidden");
+
+        // Restart video with sound by reloading iframe
+        iframe.src =
+            "https://customer-zsr29ljfl52p7dck.cloudflarestream.com/3bc40880ca1cf45a801815fb377a3944/iframe?controls=true&autoplay=true";
     });
 });
+
 
 /* =========================================================
    SUBTLE MAGNETIC CURSOR PULL FOR FAQ ITEMS
