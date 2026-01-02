@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Elite LinkUp Live</title>
+    <link rel="stylesheet" href="../course_style.css">
+    <link rel="stylesheet" href="live.css">
+</head>
+
+<body class="course-body">
+
+<main class="live-channel">
+
+    <!-- =========================
+         CHANNEL HEADER
+    ========================== -->
+
+    <section class="channel-header">
+
+        <div class="channel-avatar">
+            <img src="../courses/courses_profiles/logo/live_profile.png" alt="Elite LinkUp">
+        </div>
+
+        <h1 class="channel-name">Elite LinkUp</h1>
+
+        <nav class="channel-nav">
+            <button class="tab" data-tab="live">Live</button>
+            <button class="tab" data-tab="videos">Videos</button>
+            <button class="tab" data-tab="clips">Clips</button>
+        </nav>
+
+    </section>
+
+    <!-- =========================
+         TAB CONTENT
+    ========================== -->
+
+    <section class="channel-content">
+
+        <!-- LIVE -->
+        <div class="tab-panel" id="live">
+            <div class="video-placeholder live">
+                <span class="live-badge">LIVE</span>
+                <p>Live Stream Player</p>
+            </div>
+
+            <div class="live-chat">
+                <p class="chat-placeholder">Chat will appear here</p>
+            </div>
+        </div>
+
+        <!-- VIDEOS -->
+        <div class="tab-panel" id="videos">
+
+            <!-- VIDEO PLAYER VIEW (HIDDEN BY DEFAULT) -->
+            <div id="video-player-view" style="display:none;">
+
+                <button id="back-to-videos" style="margin-bottom:16px;">
+                    ← Back to videos
+                </button>
+
+                <video
+                    id="main-player"
+                    controls
+                    style="width:100%; max-width:1100px; margin:0 auto; display:block; border-radius:18px;"
+                >
+                    <source src="" type="video/mp4">
+                </video>
+
+            </div>
+
+            <!-- VIDEO GRID WRAPPER -->
+            <div id="videos-grid-view">
+                <!-- VIDEO GRID (AUTO-GENERATED) -->
+                <div class="video-grid" id="videos-grid">
+                    <!-- JS will inject video cards here -->
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CLIPS -->
+        <div class="tab-panel" id="clips">
+            <div class="video-grid">
+                <div class="video-card">Clip A</div>
+                <div class="video-card">Clip B</div>
+                <div class="video-card">Clip C</div>
+            </div>
+        </div>
+
+    </section>
+
+</main>
+
+<script src="live.js"></script>
+</body>
+</html>

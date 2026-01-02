@@ -1,0 +1,156 @@
+/* =========================
+   CHANNEL HEADER
+========================= */
+
+.live-channel {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.channel-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.channel-avatar img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 2px solid rgba(212,175,55,0.9);
+}
+
+.channel-name {
+    margin-top: 14px;
+    font-size: 26px;
+}
+
+/* NAV TABS */
+.channel-nav {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin-top: 24px;
+}
+
+.channel-nav .tab {
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.6);
+    font-size: 15px;
+    cursor: pointer;
+    padding-bottom: 6px;
+}
+
+.channel-nav .tab.active {
+    color: #d4af37;
+    border-bottom: 2px solid #d4af37;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.channel-content {
+    margin-top: 40px;
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+/* VIDEO PLACEHOLDER */
+.video-placeholder {
+    height: 420px;
+    background: #0b0b0b;
+    border: 1px solid rgba(212,175,55,0.5);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.6);
+    position: relative;
+}
+
+.video-placeholder.live {
+    margin-bottom: 30px;
+}
+
+.live-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: red;
+    color: white;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+/* CHAT */
+.live-chat {
+    height: 260px;
+    border: 1px solid rgba(212,175,55,0.4);
+    border-radius: 14px;
+    padding: 16px;
+    background: #0b0b0b;
+}
+
+/* VIDEO GRID */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 28px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+.video-card {
+    height: 180px;
+    background: #0b0b0b;
+    border: 1px solid rgba(212,175,55,0.4);
+    border-radius: 16px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+}
+
+
+.video-title {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0)
+    );
+}
+#back-to-videos {
+    background: none;
+    border: none;
+    color: #d4af37;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 16px;
+    padding: 0;
+}
+
+#back-to-videos:hover {
+    text-decoration: underline;
+}
