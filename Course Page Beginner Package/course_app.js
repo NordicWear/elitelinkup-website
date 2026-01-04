@@ -1,55 +1,62 @@
-// course_app.js — CLEAN VERSION (No course.html references)
+// course_app.js — CLEAN VERSION (BEGINNER PROGRAMS ONLY)
 
 // Path from Course Page folder
 const ROOT_V2 = "..";
 
-// List of courses for the grid
+// BEGINNER PROGRAMS ONLY
 const COURSES = [
-    {
-        id: "rikhards_50_secrets",
-        title: "Rikhard's 50 Secrets of Success",
-        track: "Success & Mindset · Rikhard",
-        notion: "https://www.notion.so/Rikhard-s-50-Secrets-of-Success-2bd02dac10bc818080f7c45aa58d7102?pvs=21"
-    },
     {
         id: "affiliate_elite",
         title: "Affiliate Elite (Affiliate Marketing)",
-        track: "Affiliate Marketing · Aleks"
-    },
-    {
-        id: "ecommerce_pro",
-        title: "E-Commerce PRO (Dropshipping)",
-        track: "Dropshipping · Victor"
-    },
-    {
-        id: "faceless_creator",
-        title: "The Faceless Creator (Content Automation)",
-        track: "Content Automation · Ryan"
-    },
-    {
-        id: "amazon_pro",
-        title: "Amazon PRO (Amazon FBA)",
-        track: "Amazon FBA · Adrian"
-    },
-    {
-        id: "copywriting_pro",
-        title: "Copywriting PRO",
-        track: "Copywriting · Dominic"
+        track: "Affiliate Marketing · Aleks",
+        url: "https://elitelinkupapp.super.site/affiliate-elite-affiliate-marketing"
     },
     {
         id: "agency_vanguard",
         title: "Agency Vanguard (SMMA)",
-        track: "SMMA · Lukas"
+        track: "SMMA · Lukas",
+        url: "https://elitelinkupapp.super.site/agency-vanguard-smma"
+    },
+    {
+        id: "amazon_pro",
+        title: "Amazon PRO (Amazon FBA)",
+        track: "Amazon FBA · Adrian",
+        url: "https://elitelinkupapp.super.site/amazon-pro-amazon-fba"
+    },
+    {
+        id: "copywriting_pro",
+        title: "Copywriting PRO",
+        track: "Copywriting · Dominic",
+        url: "https://elitelinkupapp.super.site/copywriting-pro"
+    },
+    {
+        id: "ecommerce_pro",
+        title: "E-Commerce PRO (Dropshipping)",
+        track: "Dropshipping · Victor",
+        url: "https://elitelinkupapp.super.site/e-commerce-pro-dropshipping"
     },
     {
         id: "bull_masterclass",
         title: "The Bull Masterclass (Trading)",
-        track: "Trading · Henrik"
+        track: "Trading · Henrik",
+        url: "https://elitelinkupapp.super.site/the-bull-masterclass-trading"
+    },
+    {
+        id: "faceless_creator",
+        title: "The Faceless Creator (Content Automation)",
+        track: "Content Automation · Ryan",
+        url: "https://elitelinkupapp.super.site/the-faceless-creator-content-automation"
+    },
+    {
+        id: "rikhards_50_secrets",
+        title: "Rikhard's 50 Secrets of Success",
+        track: "Mindset & Business · Rikhard",
+        url: "https://elitelinkupapp.super.site/rikhards-50-secrets-of-success"
     }
 ];
 
 // -------------------------------------------
-// ONLY REMAINING FUNCTION: COURSE GRID
+// COURSE GRID (SAME AS CLEAN VERSION)
 // -------------------------------------------
 (function initCourseGrid() {
     const grid = document.getElementById("courseGrid");
@@ -68,25 +75,22 @@ const COURSES = [
             <p class="mentor-card-sub">${course.track}</p>
 
             <p class="mentor-card-desc">Click to open</p>
-
             <button class="mentor-card-btn">Open</button>
         `;
 
         card.addEventListener("click", () => {
-            if (course.id === "rikhards_50_secrets") {
-                            window.location.href = course.notion; // Open Notion directly
-                        } else {
-                            window.location.href = `course_modules.html?id=${course.id}`; // Default behavior
-                        }
+            window.location.href = course.url;
         });
 
         grid.appendChild(card);
     });
 })();
-// Top 2 Rikhard programs
+
+// -------------------------------------------
+// RIKHARD HERO PROGRAMS (BEGINNER)
+// -------------------------------------------
 const RIKHARD_PROGRAMS = [
-    "rikhards_50_secrets",
-    "rikhards_networking_playbook"
+    "rikhards_50_secrets"
 ];
 
 const eliteContainer = document.getElementById("rikhardsPrograms");
@@ -97,7 +101,7 @@ COURSES.forEach(course => {
     let card;
 
     if (isElite) {
-        // HERO PREMIUM CARD
+        // HERO CARD
         card = document.createElement("article");
         card.className = "hero-card";
 
@@ -114,17 +118,13 @@ COURSES.forEach(course => {
         `;
 
         card.addEventListener("click", () => {
-            if (course.id === "rikhards_50_secrets" && course.notion) {
-                window.location.href = "https://rikhards-50-secrets.super.site/";
-            } else {
-                window.location.href = `course_modules.html?id=${course.id}`;
-            }
+            window.location.href = course.url;
         });
 
         eliteContainer.appendChild(card);
 
     } else {
-        // NORMAL MENTOR PROGRAM CARD
+        // NORMAL MENTOR CARD
         card = document.createElement("article");
         card.className = "mentor-style-card";
 
@@ -141,14 +141,9 @@ COURSES.forEach(course => {
         `;
 
         card.addEventListener("click", () => {
-            if (course.id === "rikhards_50_secrets" && course.notion) {
-                window.location.href = "https://rikhards-50-secrets.super.site/";
-            } else {
-                window.location.href = `course_modules.html?id=${course.id}`;
-            }
+            window.location.href = course.url;
         });
 
         mentorContainer.appendChild(card);
     }
 });
-
