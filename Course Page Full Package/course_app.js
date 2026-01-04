@@ -9,59 +9,71 @@ const COURSES = [
         id: "affiliate_elite",
         title: "Affiliate Elite (Affiliate Marketing)",
         track: "Affiliate Marketing · Aleks",
+        url: "https://elitelinkupapp.super.site/affiliate-elite-affiliate-marketing"
     },
     {
         id: "agency_vanguard",
         title: "Agency Vanguard (SMMA)",
         track: "SMMA · Lukas",
+        url: "https://elitelinkupapp.super.site/agency-vanguard-smma"
     },
     {
         id: "amazon_pro",
         title: "Amazon PRO (Amazon FBA)",
         track: "Amazon FBA · Adrian",
+        url: "https://elitelinkupapp.super.site/amazon-pro-amazon-fba"
     },
     {
         id: "copywriting_pro",
         title: "Copywriting PRO",
         track: "Copywriting · Dominic",
+        url: "https://elitelinkupapp.super.site/copywriting-pro"
     },
     {
         id: "ecommerce_pro",
         title: "E-Commerce PRO (Dropshipping)",
         track: "Dropshipping · Victor",
-    },
-    {
-        id: "rikhards_50_secrets",
-        title: "Rikhard's 50 Secrets of Success",
-        track: "Mindset & Business · Rikhard",
-        notion: "https://www.notion.so/Rikhard-s-50-Secrets-of-Success-2b702dac10bc80ac880fc27b8c448a25?pvs=12"
-    },
-    {
-        id: "rikhards_networking_playbook",
-        title: "Rikhard's Networking Playbook",
-        track: "Networking · Rikhard",
-    },
-    {
-        id: "bull_masterclass",
-        title: "The Bull Masterclass (Trading)",
-        track: "Trading · Henrik",
-    },
-    {
-        id: "faceless_creator",
-        title: "The Faceless Creator (Content Automation)",
-        track: "Content Automation · Ryan",
+        url: "https://elitelinkupapp.super.site/e-commerce-pro-dropshipping"
     },
     {
         id: "high_ticket_sales",
         title: "High Ticket Sales (Sales)",
         track: "High Ticket Sales · Marcus",
+        url: "https://elitelinkupapp.super.site/high-ticket-sales-sales"
     },
     {
         id: "peak_focus_blueprint",
         title: "Peak Focus Blueprint",
         track: "Neuroscience & Focus · Thomas",
-    }
+        url: "https://elitelinkupapp.super.site/peak-focus-blueprint"
+    },
+    {
+        id: "rikhards_50_secrets",
+        title: "Rikhard's 50 Secrets of Success",
+        track: "Mindset & Business · Rikhard",
+        url: "https://elitelinkupapp.super.site/rikhards-50-secrets-of-success"
+    },
+    {
+        id: "rikhards_networking_playbook",
+        title: "Rikhard's Networking Playbook",
+        track: "Networking · Rikhard",
+        url: "https://elitelinkupapp.super.site/rikhards-networking-playbook"
+    },
+    {
+        id: "bull_masterclass",
+        title: "The Bull Masterclass (Trading)",
+        track: "Trading · Henrik",
+        url: "https://elitelinkupapp.super.site/the-bull-masterclass-trading"
+    },
+    {
+        id: "faceless_creator",
+        title: "The Faceless Creator (Content Automation)",
+        track: "Content Automation · Ryan",
+        url: "https://elitelinkupapp.super.site/the-faceless-creator-content-automation"
+    },
+
 ];
+
 
 // -------------------------------------------
 // ONLY REMAINING FUNCTION: COURSE GRID
@@ -88,11 +100,7 @@ const COURSES = [
         `;
 
         card.addEventListener("click", () => {
-            if (course.id === "rikhards_50_secrets") {
-                            window.location.href = course.notion; // Open Notion directly
-                        } else {
-                            window.location.href = `course_modules.html?id=${course.id}`; // Default behavior
-                        }
+            window.location.href = course.url;
         });
 
         grid.appendChild(card);
@@ -129,11 +137,7 @@ COURSES.forEach(course => {
         `;
 
         card.addEventListener("click", () => {
-            if (course.id === "rikhards_50_secrets" && course.notion) {
-                window.location.href = "https://rikhards-50-secrets.super.site/";
-            } else {
-                window.location.href = `course_modules.html?id=${course.id}`;
-            }
+            window.location.href = course.url;
         });
 
         eliteContainer.appendChild(card);
@@ -156,11 +160,7 @@ COURSES.forEach(course => {
         `;
 
         card.addEventListener("click", () => {
-            if (course.id === "rikhards_50_secrets" && course.notion) {
-                window.location.href = "https://rikhards-50-secrets.super.site/";
-            } else {
-                window.location.href = `course_modules.html?id=${course.id}`;
-            }
+            window.location.href = course.url;
         });
 
         mentorContainer.appendChild(card);
